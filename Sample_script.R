@@ -31,7 +31,12 @@ theme.clean <- function(){
 
 # Load data ----
 
+temp_elevation = read.csv("temp_elevation.csv")
+
 # Make a plot showing how soil temperature changes with elevation ----
+
+ggplot(temp_elevation, aes(Elevation.m, Soil.temp.mean)) +
+  geom_line()
 
 # Save your plot in your project directory
 
