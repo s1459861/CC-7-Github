@@ -35,10 +35,12 @@ temp_elevation = read.csv("temp_elevation.csv")
 
 # Make a plot showing how soil temperature changes with elevation ----
 
-ggplot(temp_elevation, aes(Elevation.m, Soil.temp.mean)) +
+temp_elevation_plot = ggplot(temp_elevation, aes(Elevation.m, Soil.temp.mean)) +
   geom_line()
 
 # Save your plot in your project directory
+
+ggsave("temp_elevation_plot.png", temp_elevation_plot)
 
 # Commit, pull, push!
 
